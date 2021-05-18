@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Text from './Text'
 import styles from '../styles'
 import headshot from '../assets/headshot.webp'
 
@@ -99,11 +100,11 @@ const ContentContainer = styled.div`
   align-items: start;
 `
 
-const Text = styled.p`
-  margin: 0;
-  font-size: 14px;
-  font-weight: 400;
-`
+// const Text = styled.p`
+//   margin: 0;
+//   font-size: 14px;
+//   font-weight: 400;
+// `
 
 const Email = styled(Text)`
   text-decoration: none;
