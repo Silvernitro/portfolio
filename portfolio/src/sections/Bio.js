@@ -1,6 +1,6 @@
 import React from 'react-dom'
 import styled from 'styled-components'
-import Text from './Text'
+import Text from '../components/Text'
 
 const BodyText = ({ style, children }) => (
   <Text

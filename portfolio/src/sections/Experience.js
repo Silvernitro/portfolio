@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import SectionHeading from './SectionHeading'
-import Text from './Text'
-import TA from './Experiences/TA'
-import Abillion from './Experiences/Abillion'
+import SectionHeading from '../components/SectionHeading'
+import Text from '../components/Text'
+import TA from '../copy/experiences/TA'
+import Abillion from '../copy/experiences/Abillion'
 
 const SingleExperience = ({
   date,

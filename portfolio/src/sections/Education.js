@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import SectionHeading from './SectionHeading'
-import Text from './Text'
+import SectionHeading from '../components/SectionHeading'
+import Text from '../components/Text'
 
 const Education = () => (
   <Container>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import SectionHeading from './SectionHeading'
-import Project from './Project'
+import SectionHeading from '../components/SectionHeading'
+import Project from '../components/Project'
 import copy from '../copy/projects/copyProjects'
 
 const Projects = () => (

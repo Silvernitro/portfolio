@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import styles from '../styles'
-import SectionHeading from './SectionHeading'
-import Text from './Text'
+import SectionHeading from '../components/SectionHeading'
+import Text from '../components/Text'
 
 const LANGUAGES = ['Javascript', 'Java', 'C', 'Python', 'SQL']
 const FRONTEND = ['ReactJS', 'React Native', 'Redux']
