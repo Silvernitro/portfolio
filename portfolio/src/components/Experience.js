@@ -2,66 +2,48 @@ import React from 'react'
 import styled from 'styled-components'
 import SectionHeading from './SectionHeading'
 import Text from './Text'
+import TA from './Experiences/TA'
+import Abillion from './Experiences/Abillion'
+
+const SingleExperience = ({
+  date,
+  roleTitle,
+  title,
+  content,
+}) => (
+  <ExperienceContainer>
+    <LeftSection>
+      <Text style={{ fontSize: '18px', 'margin-bottom': '10px' }}>{date}</Text>
+      <Text style={{ fontSize: '20px', fontWeight: '800' }}>{roleTitle}</Text>
+    </LeftSection>
+
+    <VerticalDivider />
+
+    <RightSection>
+      <Text style={{ fontSize: '23px' }}>{title}</Text>
+      {content}
+    </RightSection>
+  </ExperienceContainer>
+)
 
 const Experience = () => (
   <Container>
-    <SectionHeading>Experience</SectionHeading>
+    <SectionHeading style={{ marginBottom: '60px' }}>Experience</SectionHeading>
 
     <Body>
+      <SingleExperience
+        date="January 2021 - May 2021"
+        roleTitle="Undergraduate Teaching Assistant"
+        title="National University of Singapore"
+        content={<TA />}
+      />
 
-      <LeftSection>
-        <ListText style={{ fontSize: '18px', 'margin-bottom': '10px' }}>January 2021 - Present</ListText>
-        <ListText style={{ fontSize: '20px', fontWeight: '800' }}>
-          Undergraduate Teaching Assistant
-        </ListText>
-      </LeftSection>
-
-      <VerticalDivider />
-
-      <RightSection>
-        <ListText style={{ fontSize: '23px' }}>National University of Singapore</ListText>
-        <ul>
-          <li style={{ fontSize: '20px' }}>
-            <ListText>
-              Taught the School of Computing module: Programming Methodology II
-            </ListText>
-          </li>
-          <li>
-            <ListText>
-              Conducted lessons to teach and guide students to complete weekly
-              programming assignments
-            </ListText>
-          </li>
-          <li>
-            <ListText>
-              Reviewed and gave feedback for code submissions
-            </ListText>
-          </li>
-          <li>
-            <ListText>
-              Module content includes:
-            </ListText>
-            <ul>
-              <li>
-                <ListText>
-                  Object-oriented programming principles
-                </ListText>
-              </li>
-              <li>
-                <ListText>
-                  Functional programming principles
-                </ListText>
-              </li>
-              <li>
-                <ListText>
-                  Java constructs
-                </ListText>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </RightSection>
-
+      <SingleExperience
+        date="May 2020 - August 2020"
+        roleTitle="Software Engineer Intern"
+        title="abillion"
+        content={<Abillion />}
+      />
     </Body>
 
   </Container>
@@ -78,14 +60,21 @@ const Container = styled.section`
 
 const Body = styled.div`
   display: flex;
+  flex-direction: column;
   width: 70%;
-  padding-left: 20%;
+`
+
+const ExperienceContainer = styled.div`
+  display: flex;
+  padding-left: 10%;
 `
 
 const LeftSection = styled.div`
+  width: 30%;
   display: flex;
   flex-direction: column;
   margin-right: 50px;
+  padding-top: 50px;
 `
 
 const VerticalDivider = styled.div`
@@ -94,11 +83,9 @@ const VerticalDivider = styled.div`
 `
 
 const RightSection = styled.div`
+  width: 60%;
   display: flex;
   flex-direction: column;
   margin-left: 50px;
-`
-
-const ListText = styled(Text)`
-  line-height: 29px;
+  padding-top: 50px;
 `
