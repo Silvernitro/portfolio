@@ -13,6 +13,6 @@ export default SectionHeading
 const Heading = styled.h1`
   font-size: 24px;
   font-weight: 600;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.15em;
   color: ${globalStyles.PRI_COLOR};
 `

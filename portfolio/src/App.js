@@ -7,6 +7,8 @@ import NavBar from './components/NavBar'
 import IntroBox from './components/IntroBox'
 import Bio from './components/Bio'
 import Experience from './components/Experience'
+import Education from './components/Education'
+import Skills from './components/Skills'
 
 function App() {
   library.add(fab, faCheckSquare, faCoffee)
@@ -17,6 +19,8 @@ function App() {
       <IntroBox />
       <Bio />
       <Experience />
+      <Education />
+      <Skills />
     </>
   );
 }
