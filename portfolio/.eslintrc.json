@@ -3,6 +3,7 @@
   "rules": {
     "react/jsx-filename-extension": "off",
     "react/prop-types": "off",
-    "semi": "off"
+    "semi": "off",
+    "react/no-unescaped-entities": "off"
   }
 }
