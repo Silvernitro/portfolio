@@ -76,6 +76,7 @@ const LeftSection = styled.div`
   flex-direction: column;
   margin-right: 50px;
   padding-top: 50px;
+  text-align: right;
 `
 
 const VerticalDivider = styled.div`

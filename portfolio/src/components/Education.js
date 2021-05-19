@@ -13,8 +13,21 @@ const Education = () => (
       <ExperienceContainer>
 
         <LeftSection>
-          <Text style={{ fontSize: '18px', 'margin-bottom': '10px' }}>August 2019 - Present</Text>
-          <Text style={{ fontSize: '20px', fontWeight: '800', lineHeight: '1.25em' }}>Bachelor of Computing (Honours) in Computer Science</Text>
+          <Text style={{
+            fontSize: '18px',
+            marginBottom: '10px',
+          }}
+          >
+            August 2019 - Present
+          </Text>
+          <Text style={{
+            fontSize: '20px',
+            fontWeight: '800',
+            lineHeight: '1.25em',
+          }}
+          >
+            Bachelor of Computing (Honours) in Computer Science
+          </Text>
         </LeftSection>
 
         <VerticalDivider />
@@ -78,6 +91,7 @@ const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 50px;
+  text-align: right;
 `
 
 const VerticalDivider = styled.div`
