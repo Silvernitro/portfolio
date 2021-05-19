@@ -14,16 +14,16 @@ const IntroBox = () => (
 
       <Content>
         <ContentContainer>
-          <Text style={{'fontSize': '30px', 'marginBottom': '10px'}}>Hi, I am Sam</Text>
-          <Text style={{'fontWeight': '800', 'marginBottom': '30px'}}>Second Year Computer Science Undergraduate</Text>
-          <Text style={{'fontWeight': '800', 'marginBottom': '10px'}}>Email:</Text>
-          <Email as='a' href='mailto:lau.siawsam.u.nus.edu' style={{'letterSpacing': '0.05em'}}>lau.siawsam.u.nus.edu</Email>
+          <Text style={{ fontSize: '30px', marginBottom: '10px' }}>Hi, I am Sam</Text>
+          <Text style={{ fontSize: '14px', fontWeight: '800', marginBottom: '30px' }}>Second Year Computer Science Undergraduate</Text>
+          <Text style={{ fontSize: '14px', fontWeight: '800', marginBottom: '10px' }}>Email:</Text>
+          <Email as="a" href="mailto:lau.siawsam.u.nus.edu" style={{ letterSpacing: '0.05em' }}>lau.siawsam.u.nus.edu</Email>
 
           <a
-            href='https://drive.google.com/file/d/1YkdjdK6pOXbzlgV7tetaRu-_XSdp34u7/view?usp=sharing'
-            target='_blank'
-            rel='noreferrer noopener'
-            style={{'textDecoration': 'none'}}
+            href="https://drive.google.com/file/d/1YkdjdK6pOXbzlgV7tetaRu-_XSdp34u7/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer noopener"
+            style={{ textDecoration: 'none' }}
           >
             <ResumeButton>
               My Resume
@@ -32,23 +32,23 @@ const IntroBox = () => (
 
           <SocialContainer>
             <a
-              href='https://www.linkedin.com/in/lau-siaw-sam/'
-              target='_blank'
-              rel='noreferrer noopener'
+              href="https://www.linkedin.com/in/lau-siaw-sam/"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <StyledIcon icon={['fab', 'linkedin']} />
             </a>
             <a
-              href='https://github.com/Silvernitro'
-              target='_blank'
-              rel='noreferrer noopener'
+              href="https://github.com/Silvernitro"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <StyledIcon icon={['fab', 'github']} />
             </a>
             <a
-              href='https://t.me/lausiawsam'
-              target='_blank'
-              rel='noreferrer noopener'
+              href="https://t.me/lausiawsam"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <StyledIcon icon={['fab', 'telegram']} />
             </a>
@@ -100,13 +100,8 @@ const ContentContainer = styled.div`
   align-items: start;
 `
 
-// const Text = styled.p`
-//   margin: 0;
-//   font-size: 14px;
-//   font-weight: 400;
-// `
-
 const Email = styled(Text)`
+  font-size: 14px;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -119,6 +114,7 @@ const ResumeButton = styled.button`
   cursor: pointer;
   color: white;
   font-weight: 50;
+  font-size: 14px;
   letter-spacing: 0.05em;
 
   display: flex;

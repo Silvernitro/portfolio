@@ -4,8 +4,13 @@ import Text from './Text'
 
 const BodyText = ({ style, children }) => (
   <Text
-    fontSize='18px'
-    style={{ 'textAlign': 'center', 'lineHeight': '27px', ...style }}
+    style={{
+      fontSize: '18px',
+      textAlign: 'center',
+      lineHeight: '27px',
+      color: 'black',
+      ...style,
+    }}
   >
     {children}
   </Text>
@@ -14,13 +19,13 @@ const BodyText = ({ style, children }) => (
 const Bio = () => (
   <Container>
     <Content>
-      <BodyText style={{'marginBottom': '30px'}}>
+      <BodyText style={{ marginBottom: '30px' }}>
         I am a Computer Science Undergraduate at the University of Singapore.
       </BodyText>
 
-      <BodyText style={{'marginBottom': '30px'}}>
-        I have experience in full-stack web development and am seeking to take on new challenges
-        to make an impact on people's lifestyles through technology.
+      <BodyText style={{ marginBottom: '30px' }}>
+        {`I have experience in full-stack web development and am seeking to take on new challenges
+        to make an impact on people's lifestyles through technology.`}
       </BodyText>
 
       <BodyText>
@@ -50,5 +55,3 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
 `
-
-
