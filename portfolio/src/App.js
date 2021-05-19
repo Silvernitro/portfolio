@@ -9,6 +9,7 @@ import Bio from './components/Bio'
 import Experience from './components/Experience'
 import Education from './components/Education'
 import Skills from './components/Skills'
+import Projects from './components/Projects'
 
 function App() {
   library.add(fab, faCheckSquare, faCoffee)
@@ -21,6 +22,7 @@ function App() {
       <Experience />
       <Education />
       <Skills />
+      <Projects />
     </>
   );
 }

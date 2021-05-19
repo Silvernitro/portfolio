@@ -2,29 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 import styles from '../styles'
 
-const NavBar = () => {
-  return (
-    <Container>
-      <Name>
-        Lau Siaw Sam
-      </Name>
-      <NavButtons>
-        <Button>
-          EXPERIENCE
-        </Button>
-        <Button>
-          EDUCATION
-        </Button>
-        <Button>
-          PROJECTS
-        </Button>
-        <Button>
-          SKILLS
-        </Button>
-      </NavButtons>
-    </Container>
-  )
-}
+const NavBar = () => (
+  <Container>
+    <Name>
+      Lau Siaw Sam
+    </Name>
+    <NavButtons>
+      <Button>
+        EXPERIENCE
+      </Button>
+      <Button>
+        EDUCATION
+      </Button>
+      <Button>
+        PROJECTS
+      </Button>
+      <Button>
+        SKILLS
+      </Button>
+    </NavButtons>
+  </Container>
+)
 
 export default NavBar
 
