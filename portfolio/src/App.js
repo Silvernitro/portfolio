@@ -11,6 +11,7 @@ import Education from './sections/Education'
 import Skills from './sections/Skills'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
+import Footer from './sections/Footer'
 
 function App() {
   library.add(fab, faCheckSquare, faCoffee)
@@ -33,6 +34,7 @@ function App() {
       <Skills refProp={skillsRef} />
       <Projects refProp={projectsRef} />
       <Contact />
+      <Footer />
     </>
   );
 }
