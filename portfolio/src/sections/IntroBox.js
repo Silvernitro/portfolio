@@ -17,7 +17,7 @@ const IntroBox = () => (
           <Text style={{ fontSize: '30px', marginBottom: '10px' }}>Hi, I am Sam</Text>
           <Text style={{ fontSize: '14px', fontWeight: '800', marginBottom: '30px' }}>Second Year Computer Science Undergraduate</Text>
           <Text style={{ fontSize: '14px', fontWeight: '800', marginBottom: '10px' }}>Email:</Text>
-          <Email as="a" href="mailto:lau.siawsam.u.nus.edu" style={{ letterSpacing: '0.05em' }}>lau.siawsam.u.nus.edu</Email>
+          <Email as="a" href="mailto:lau.siawsam@u.nus.edu" style={{ letterSpacing: '0.05em' }}>lau.siawsam@u.nus.edu</Email>
 
           <a
             href="https://drive.google.com/file/d/1YkdjdK6pOXbzlgV7tetaRu-_XSdp34u7/view?usp=sharing"
