@@ -1,9 +1,47 @@
-import React, { useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import styles from '../styles'
 
 const NavBar = ({ sections }) => {
   const navBarRef = useRef(null)
+  const [activeSection, setActiveSection] = useState('')
+
+  // helper fxn to get runtime dimensions of a DOM node
+  const getDimensions = (ref) => {
+    const { height } = ref.current.getBoundingClientRect()
+    const elementTop = ref.current.offsetTop
+    const elementBottom = elementTop + height
+
+    return {
+      height,
+      elementTop,
+      elementBottom,
+    }
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const { height: navBarHeight } = getDimensions(navBarRef)
+      const currScrollY = window.scrollY + navBarHeight
+
+      // check which section user is currently in
+      const [currSection = ''] = Object.entries(sections).find(([key, ref]) => {
+        const { elementTop, elementBottom } = getDimensions(ref)
+        return currScrollY >= elementTop && currScrollY < elementBottom
+      }) ?? []
+
+      // only set state if section has changed!
+      if (currSection !== activeSection) {
+        setActiveSection(currSection)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [activeSection])
 
   const scrollToSection = (ref) => {
     window.scrollTo({
@@ -19,16 +57,28 @@ const NavBar = ({ sections }) => {
         Lau Siaw Sam
       </Name>
       <NavButtons>
-        <Button onClick={() => scrollToSection(sections.experienceRef)}>
+        <Button
+          onClick={() => scrollToSection(sections.experienceRef)}
+          isActive={activeSection === 'experienceRef'}
+        >
           EXPERIENCE
         </Button>
-        <Button onClick={() => scrollToSection(sections.educationRef)}>
+        <Button
+          onClick={() => scrollToSection(sections.educationRef)}
+          isActive={activeSection === 'educationRef'}
+        >
           EDUCATION
         </Button>
-        <Button onClick={() => scrollToSection(sections.skillsRef)}>
+        <Button
+          onClick={() => scrollToSection(sections.skillsRef)}
+          isActive={activeSection === 'skillsRef'}
+        >
           SKILLS
         </Button>
-        <Button onClick={() => scrollToSection(sections.projectsRef)}>
+        <Button
+          onClick={() => scrollToSection(sections.projectsRef)}
+          isActive={activeSection === 'projectsRef'}
+        >
           PROJECTS
         </Button>
       </NavButtons>
@@ -68,6 +118,11 @@ const Button = styled.div`
   padding: 10px 30px;
 
   font-size: 14px;
-  color: ${styles.PRI_COLOR};
+  color: ${({ isActive }) => (isActive ? styles.ACTIVE_SECTION_COLOR : styles.PRI_COLOR)};
   cursor: pointer;
+
+  &:hover {
+    color: ${styles.ACTIVE_SECTION_COLOR};
+  }
+  transition: color 0.3s;
 `

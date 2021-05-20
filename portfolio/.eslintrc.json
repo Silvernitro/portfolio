@@ -4,6 +4,7 @@
     "react/jsx-filename-extension": "off",
     "react/prop-types": "off",
     "semi": "off",
+    "no-unused-vars": "warn",
     "react/no-unescaped-entities": "off"
   }
 }
