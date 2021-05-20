@@ -4,8 +4,8 @@ import SectionHeading from '../components/SectionHeading'
 import Project from '../components/Project'
 import copy from '../copy/projects/copyProjects'
 
-const Projects = () => (
-  <Container>
+const Projects = ({ refProp }) => (
+  <Container ref={refProp}>
     <SectionHeading>PROJECTS</SectionHeading>
 
     {copy.map(({

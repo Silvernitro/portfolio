@@ -9,8 +9,8 @@ const FRONTEND = ['ReactJS', 'React Native', 'Redux']
 const BACKEND = ['NodeJS', 'ExpressJS', 'MongoDB', 'PostgreSQL', 'GraphQL']
 const CREATIVE = ['Adobe Photoshop Lightroom', 'Adobe Photoshop']
 
-const Skills = () => (
-  <Container>
+const Skills = ({ refProp }) => (
+  <Container ref={refProp}>
     <SectionHeading style={{ color: 'inherit', margin: '30px 0px 60px 0px' }}>
       Skills
     </SectionHeading>

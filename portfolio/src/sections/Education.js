@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import SectionHeading from '../components/SectionHeading'
 import Text from '../components/Text'
 
-const Education = () => (
-  <Container>
+const Education = ({ refProp }) => (
+  <Container ref={refProp}>
     <SectionHeading style={{ marginBottom: '60px' }}>
       Education
     </SectionHeading>

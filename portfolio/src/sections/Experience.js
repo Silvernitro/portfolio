@@ -26,8 +26,8 @@ const SingleExperience = ({
   </ExperienceContainer>
 )
 
-const Experience = () => (
-  <Container>
+const Experience = ({ refProp }) => (
+  <Container ref={refProp}>
     <SectionHeading style={{ marginBottom: '60px' }}>Experience</SectionHeading>
 
     <Body>

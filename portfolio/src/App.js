@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -14,16 +14,24 @@ import Contact from './sections/Contact'
 
 function App() {
   library.add(fab, faCheckSquare, faCoffee)
+  const experienceRef = useRef(null);
+  const educationRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
 
   return (
     <>
-      <NavBar />
+      <NavBar
+        sections={{
+          experienceRef, educationRef, skillsRef, projectsRef,
+        }}
+      />
       <IntroBox />
       <Bio />
-      <Experience />
-      <Education />
-      <Skills />
-      <Projects />
+      <Experience refProp={experienceRef} />
+      <Education refProp={educationRef} />
+      <Skills refProp={skillsRef} />
+      <Projects refProp={projectsRef} />
       <Contact />
     </>
   );
