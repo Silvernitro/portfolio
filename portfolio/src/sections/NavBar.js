@@ -30,6 +30,9 @@ const Container = styled.div`
   padding: 20px 30px 20px 50px;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: white;
 `
 
 const Name = styled.div`
