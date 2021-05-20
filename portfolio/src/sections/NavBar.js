@@ -51,9 +51,13 @@ const NavBar = ({ sections }) => {
     })
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <Container ref={navBarRef}>
-      <Name>
+      <Name onClick={scrollToTop}>
         Lau Siaw Sam
       </Name>
       <NavButtons>
@@ -104,7 +108,8 @@ const Name = styled.div`
   align-items: center;
 
   font-size: 30px;
-  color: ${styles.PRI_COLOR}
+  color: ${styles.PRI_COLOR};
+  cursor: pointer;
 `
 
 const NavButtons = styled.div`

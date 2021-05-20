@@ -8,7 +8,7 @@ import styles from '../styles'
 const Contact = () => (
   <Container>
     <SectionHeading>
-      CONTACT ME
+      Contact Me
     </SectionHeading>
 
     <Body>

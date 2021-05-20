@@ -11,7 +11,7 @@ const CREATIVE = ['Adobe Photoshop Lightroom', 'Adobe Photoshop']
 
 const Skills = ({ refProp }) => (
   <Container ref={refProp}>
-    <SectionHeading style={{ color: 'inherit', margin: '30px 0px 60px 0px' }}>
+    <SectionHeading style={{ color: 'inherit', marginBottom: '40px' }}>
       Skills
     </SectionHeading>
 
@@ -93,6 +93,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 40px;
   padding-bottom: 100px;
 `
 

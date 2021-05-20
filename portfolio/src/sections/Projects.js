@@ -6,7 +6,7 @@ import copy from '../copy/projects/copyProjects'
 
 const Projects = ({ refProp }) => (
   <Container ref={refProp}>
-    <SectionHeading>PROJECTS</SectionHeading>
+    <SectionHeading>Projects</SectionHeading>
 
     {copy.map(({
       projectTitle,
