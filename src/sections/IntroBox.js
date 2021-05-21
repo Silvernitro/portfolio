@@ -65,7 +65,8 @@ export default IntroBox
 const Container = styled.section`
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `
 
 const Box = styled.div`

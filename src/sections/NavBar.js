@@ -105,6 +105,7 @@ const Container = styled.header`
   @media (max-width: 768px) {
     display: none;
   }
+
 `
 
 const Name = styled.div`
