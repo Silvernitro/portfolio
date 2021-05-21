@@ -86,8 +86,7 @@ const Image = styled.img`
 
 
   @media (max-width: 768px) {
-    width: auto;
-    height: 40%;
+    width: 100%;
     object-fit: cover;
   }
 `
