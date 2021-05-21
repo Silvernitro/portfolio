@@ -101,6 +101,10 @@ const Container = styled.header`
   position: sticky;
   top: 0;
   background-color: white;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const Name = styled.div`

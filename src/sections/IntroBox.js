@@ -11,6 +11,7 @@ const IntroBox = () => (
       <Image src={headshot} />
 
       <VerticalDivider />
+      <HorizontalDivider />
 
       <Content>
         <ContentContainer>
@@ -65,22 +66,43 @@ const Container = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top:
 `
 
 const Box = styled.div`
   margin-top: 10vh;
   display: flex;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    flex-direction: column;
+  }
 `
 
 const Image = styled.img`
   width: 470px;
   height: 100%;
   object-fit: cover;
+
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const VerticalDivider = styled.div`
   width: 2px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+
+const HorizontalDivider = styled.div`
+  height: 8px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 
 const Content = styled.div`
@@ -93,6 +115,11 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+  }
 `
 
 const ContentContainer = styled.div`

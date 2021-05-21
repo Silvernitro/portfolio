@@ -13,7 +13,7 @@ const Project = ({
   <Container>
     <ProjectTitle>{projectTitle}</ProjectTitle>
     <Body>
-      <Text style={{ width: '20%' }}>{date}</Text>
+      <Date>{date}</Date>
 
       <VerticalDivider />
 
@@ -33,7 +33,7 @@ const Project = ({
             <SquareButton
               text={text}
               href={url}
-              style={{ marginLeft: idx === 0 ? '0px' : '30px' }}
+              isFirst={idx === 0}
             />
           ))}
         </ButtonContainer>
@@ -50,6 +50,10 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const ProjectTitle = styled.h2`
@@ -61,12 +65,29 @@ const ProjectTitle = styled.h2`
 const Body = styled.div`
   width: 100%;
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
+const Date = styled(Text)`
+  width: 20%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 `
 
 const VerticalDivider = styled.div`
   background-color: #2F2E2E;
   width: 3px;
   margin-left: 40px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const Content = styled.div`
@@ -74,6 +95,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const ListItem = styled.li`
@@ -88,4 +113,10 @@ const ButtonContainer = styled.div`
   display: flex;
   margin-top: 20px;
   margin-left: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
 `

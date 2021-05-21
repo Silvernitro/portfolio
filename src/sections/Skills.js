@@ -16,7 +16,7 @@ const Skills = ({ refProp }) => (
     </SectionHeading>
 
     <Body>
-      <Column style={{ paddingRight: '20%' }}>
+      <Column isLeft={true}>
 
         <ColumnHeading>
           Programming
@@ -101,12 +101,24 @@ const Body = styled.div`
   display: flex;
   width: 40%;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const Column = styled.div`
   width: 40%;
   display: flex;
   flex-direction: column;
+  padding-right: ${({isLeft}) => isLeft ? '20%' : '0'};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-right: 0;
+  }
 `
 
 const ColumnHeading = styled(Text)`
@@ -115,6 +127,11 @@ const ColumnHeading = styled(Text)`
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+
+  @media (max-width: 768px) {
+    text-align: left;
+    margin-bottom: 20px;
+  }
 `
 
 const ColumnSubheading = styled(Text)`

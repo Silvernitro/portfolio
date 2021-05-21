@@ -73,17 +73,30 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   padding-bottom: 100px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 50px;
+  }
 `
 
 const Body = styled.div`
   display: flex;
   flex-direction: column;
   width: 70%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const ExperienceContainer = styled.div`
   display: flex;
   padding-left: 10%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
+  }
 `
 
 const LeftSection = styled.div`
@@ -92,11 +105,21 @@ const LeftSection = styled.div`
   flex-direction: column;
   margin-right: 50px;
   text-align: right;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: left;
+    margin-right: 0px;
+  }
 `
 
 const VerticalDivider = styled.div`
   width: 1px;
   background-color: #B0B0B0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const RightSection = styled.div`
@@ -104,6 +127,13 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 50px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 0px;
+  }
 `
 
 const ListItem = styled.li`

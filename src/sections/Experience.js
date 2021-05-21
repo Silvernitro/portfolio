@@ -11,19 +11,34 @@ const SingleExperience = ({
   title,
   content,
 }) => (
-  <ExperienceContainer>
-    <LeftSection>
-      <Text style={{ fontSize: '18px', 'margin-bottom': '10px' }}>{date}</Text>
-      <Text style={{ fontSize: '20px', fontWeight: '800' }}>{roleTitle}</Text>
-    </LeftSection>
+  <>
+    <ExperienceContainer>
+      <LeftSection>
+        <Text style={{ fontSize: '18px', 'margin-bottom': '10px' }}>{date}</Text>
+        <Text style={{ fontSize: '20px', fontWeight: '800' }}>{roleTitle}</Text>
+      </LeftSection>
 
-    <VerticalDivider />
+      <VerticalDivider />
 
-    <RightSection>
-      <Text style={{ fontSize: '23px' }}>{title}</Text>
-      {content}
-    </RightSection>
-  </ExperienceContainer>
+      <RightSection>
+        <Text style={{ fontSize: '23px' }}>{title}</Text>
+        {content}
+      </RightSection>
+    </ExperienceContainer>
+
+    <MobileContainer>
+      <TopSection>
+        <Text style={{ fontSize: '18px', 'margin-bottom': '10px' }}>{date}</Text>
+        <Text style={{ fontSize: '20px', fontWeight: '800' }}>{roleTitle}</Text>
+      </TopSection>
+
+      <BottomSection>
+        <Text style={{ fontSize: '23px' }}>{title}</Text>
+        {content}
+      </BottomSection>
+
+    </MobileContainer>
+  </>
 )
 
 const Experience = ({ refProp }) => (
@@ -57,17 +72,29 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   padding-bottom: 100px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 50px;
+  }
 `
 
 const Body = styled.div`
   display: flex;
   flex-direction: column;
   width: 70%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const ExperienceContainer = styled.div`
   display: flex;
   padding-left: 10%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const LeftSection = styled.div`
@@ -90,4 +117,26 @@ const RightSection = styled.div`
   flex-direction: column;
   margin-left: 50px;
   padding-top: 50px;
+`
+
+const MobileContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
+
+const TopSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+`
+
+const BottomSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
 `

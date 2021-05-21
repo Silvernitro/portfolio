@@ -47,6 +47,10 @@ const Container = styled.section`
   align-items: center;
   justify-content: center;
   padding: 100px 0px;
+
+  @media (max-width: 768px) {
+    padding: 50px 0px;
+  }
 `
 
 const Content = styled.div`
@@ -54,4 +58,8 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
 `
