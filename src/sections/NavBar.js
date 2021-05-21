@@ -60,6 +60,7 @@ const NavBar = ({ sections }) => {
       <Name onClick={scrollToTop}>
         Lau Siaw Sam
       </Name>
+
       <NavButtons>
         <Button
           onClick={() => scrollToSection(sections.experienceRef)}
@@ -86,6 +87,7 @@ const NavBar = ({ sections }) => {
           PROJECTS
         </Button>
       </NavButtons>
+
     </Container>
   )
 }
@@ -105,7 +107,6 @@ const Container = styled.header`
   @media (max-width: 768px) {
     display: none;
   }
-
 `
 
 const Name = styled.div`

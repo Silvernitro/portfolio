@@ -12,6 +12,7 @@ import Skills from './sections/Skills'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import MobileNavBar from './sections/MobileNavBar'
 
 function App() {
   library.add(fab, faCheckSquare, faCoffee)
@@ -23,6 +24,11 @@ function App() {
   return (
     <>
       <NavBar
+        sections={{
+          experienceRef, educationRef, skillsRef, projectsRef,
+        }}
+      />
+      <MobileNavBar
         sections={{
           experienceRef, educationRef, skillsRef, projectsRef,
         }}
