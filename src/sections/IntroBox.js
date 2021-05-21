@@ -73,7 +73,7 @@ const Box = styled.div`
   display: flex;
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 70%;
     flex-direction: column;
   }
 `
@@ -85,7 +85,9 @@ const Image = styled.img`
 
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: auto;
+    height: 40%;
+    object-fit: cover;
   }
 `
 
@@ -117,15 +119,14 @@ const Content = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    width: 100%;
-    padding: 20px 0px 20px 0px;
+    width: auto;
+    padding: 20px;
   }
 `
 
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
 `
 
 const Email = styled(Text)`
