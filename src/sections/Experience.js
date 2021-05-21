@@ -10,6 +10,7 @@ const SingleExperience = ({
   roleTitle,
   title,
   content,
+  isLast
 }) => (
   <>
     <ExperienceContainer>
@@ -26,7 +27,7 @@ const SingleExperience = ({
       </RightSection>
     </ExperienceContainer>
 
-    <MobileContainer>
+    <MobileContainer isLast={isLast}>
       <TopSection>
         <Text style={{ fontSize: '18px', 'margin-bottom': '10px' }}>{date}</Text>
         <Text style={{ fontSize: '20px', fontWeight: '800' }}>{roleTitle}</Text>
@@ -58,6 +59,7 @@ const Experience = ({ refProp }) => (
         roleTitle="Software Engineer Intern"
         title="abillion"
         content={<Abillion />}
+        isLast={true}
       />
     </Body>
 
@@ -122,7 +124,7 @@ const RightSection = styled.div`
 const MobileContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  padding-bottom: ${({isLast}) => isLast ? '0' : '30px'};
 
   @media (min-width: 768px) {
     display: none;
