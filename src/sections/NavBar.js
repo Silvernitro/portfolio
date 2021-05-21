@@ -41,7 +41,7 @@ const NavBar = ({ sections }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [activeSection])
+  }, [activeSection, sections])
 
   const scrollToSection = (ref) => {
     window.scrollTo({
