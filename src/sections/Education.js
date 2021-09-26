@@ -1,30 +1,30 @@
-import React from 'react'
-import styled from 'styled-components'
-import SectionHeading from '../components/SectionHeading'
-import Text from '../components/Text'
+import React from "react";
+import styled from "styled-components";
+import SectionHeading from "../components/SectionHeading";
+import Text from "../components/Text";
+import SquareButton from "../components/SquareButton";
 
 const Education = ({ refProp }) => (
   <Container ref={refProp}>
-    <SectionHeading style={{ marginBottom: '60px' }}>
-      Education
-    </SectionHeading>
+    <SectionHeading style={{ marginBottom: "60px" }}>Education</SectionHeading>
 
     <Body>
       <ExperienceContainer>
-
         <LeftSection>
-          <Text style={{
-            fontSize: '18px',
-            marginBottom: '10px',
-          }}
+          <Text
+            style={{
+              fontSize: "18px",
+              marginBottom: "10px",
+            }}
           >
             August 2019 - Present
           </Text>
-          <Text style={{
-            fontSize: '20px',
-            fontWeight: '800',
-            lineHeight: '1.25em',
-          }}
+          <Text
+            style={{
+              fontSize: "20px",
+              fontWeight: "800",
+              lineHeight: "1.25em",
+            }}
           >
             Bachelor of Computing (Honours) in Computer Science
           </Text>
@@ -33,39 +33,47 @@ const Education = ({ refProp }) => (
         <VerticalDivider />
 
         <RightSection>
-          <Text style={{ fontSize: '23px' }}>National University of Singapore</Text>
+          <Text style={{ fontSize: "23px" }}>
+            National University of Singapore
+          </Text>
 
           <ul>
             <ListItem>
-              <ListText>
-                Dean's List (top 5%) in Fall 2020
-              </ListText>
+              <ListText>Dean's List (top 5%)</ListText>
+              <ul>
+                <ListItem>
+                  <ListText>Spring 2021</ListText>
+                </ListItem>
+                <ListItem>
+                  <ListText>Fall 2020</ListText>
+                </ListItem>
+              </ul>
             </ListItem>
             <ListItem>
               <ListText>
-                Cumulative Average Point: 4.89/5.00
+                Cumulative Average Point: <b>4.89/5.00</b>
               </ListText>
             </ListItem>
             <ListItem>
-              <ListText>
-                On track to First Class Honours
-              </ListText>
+              <ListText>On track for First Class Honours</ListText>
             </ListItem>
             <ListItem>
-              <ListText>
-                Graduating in May 2023
-              </ListText>
+              <ListText>Graduating in May 2023</ListText>
             </ListItem>
           </ul>
-
+          <SquareButton
+            text="Transcript"
+            href="https://drive.google.com/file/d/1hg-d_1pRSnOJvt0cvk29A1hKP7nE98k3/view?usp=sharing"
+            isFirst
+            style={{ alignSelf: "flex-start" }}
+          />
         </RightSection>
       </ExperienceContainer>
-
     </Body>
   </Container>
-)
+);
 
-export default Education
+export default Education;
 
 const Container = styled.section`
   width: 100%;
@@ -77,7 +85,7 @@ const Container = styled.section`
   @media (max-width: 768px) {
     padding-bottom: 50px;
   }
-`
+`;
 
 const Body = styled.div`
   display: flex;
@@ -87,7 +95,7 @@ const Body = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
-`
+`;
 
 const ExperienceContainer = styled.div`
   display: flex;
@@ -97,7 +105,7 @@ const ExperienceContainer = styled.div`
     flex-direction: column;
     padding-left: 0;
   }
-`
+`;
 
 const LeftSection = styled.div`
   width: 30%;
@@ -111,16 +119,16 @@ const LeftSection = styled.div`
     text-align: left;
     margin-right: 0px;
   }
-`
+`;
 
 const VerticalDivider = styled.div`
   width: 1px;
-  background-color: #B0B0B0;
+  background-color: #b0b0b0;
 
   @media (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 const RightSection = styled.div`
   width: 60%;
@@ -134,12 +142,12 @@ const RightSection = styled.div`
     margin-top: 30px;
     margin-left: 0px;
   }
-`
+`;
 
 const ListItem = styled.li`
   font-size: 18px;
-`
+`;
 
 const ListText = styled(Text)`
   line-height: 26px;
-`
+`;
