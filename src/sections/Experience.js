@@ -7,7 +7,14 @@ import Abillion from "../copy/experiences/Abillion";
 import AbillionTwo from "../copy/experiences/AbillionTwo";
 import WonderWorkshop from "../copy/experiences/WonderWorkshop";
 
-const SingleExperience = ({ date, roleTitle, title, content, isLast }) => (
+const SingleExperience = ({
+  date,
+  roleTitle,
+  location,
+  title,
+  content,
+  isLast,
+}) => (
   <>
     <ExperienceContainer>
       <LeftSection>
@@ -15,6 +22,7 @@ const SingleExperience = ({ date, roleTitle, title, content, isLast }) => (
           {date}
         </Text>
         <Text style={{ fontSize: "20px", fontWeight: "800" }}>{roleTitle}</Text>
+        <Text style={{ "margin-top": "10px" }}>{location}</Text>
       </LeftSection>
 
       <VerticalDivider />
@@ -50,6 +58,7 @@ const Experience = ({ refProp }) => (
         date="July 2021 - Present"
         roleTitle="Software Engineer Intern"
         title="Wonder Workshop"
+        location="California, United States"
         content={<WonderWorkshop />}
       />
 
@@ -57,6 +66,7 @@ const Experience = ({ refProp }) => (
         date="May 2021 - July 2021"
         roleTitle="Software Engineer Intern"
         title="abillion"
+        location="Singapore"
         content={<AbillionTwo />}
       />
 
@@ -64,6 +74,7 @@ const Experience = ({ refProp }) => (
         date="January 2021 - May 2021"
         roleTitle="Undergraduate Teaching Assistant"
         title="National University of Singapore"
+        location="Singapore"
         content={<TA />}
       />
 
@@ -71,6 +82,7 @@ const Experience = ({ refProp }) => (
         date="May 2020 - August 2020"
         roleTitle="Software Engineer Intern"
         title="abillion"
+        location="Singapore"
         content={<Abillion />}
         isLast={true}
       />
