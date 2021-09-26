@@ -55,7 +55,9 @@ const Education = ({ refProp }) => (
               </ListText>
             </ListItem>
             <ListItem>
-              <ListText>On track for First Class Honours</ListText>
+              <ListText>
+                NUS Overseas Colleges (NOC) programme - Silicon Valley
+              </ListText>
             </ListItem>
             <ListItem>
               <ListText>Graduating in May 2023</ListText>
