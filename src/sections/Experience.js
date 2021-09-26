@@ -1,52 +1,65 @@
-import React from 'react'
-import styled from 'styled-components'
-import SectionHeading from '../components/SectionHeading'
-import Text from '../components/Text'
-import TA from '../copy/experiences/TA'
-import Abillion from '../copy/experiences/Abillion'
+import React from "react";
+import styled from "styled-components";
+import SectionHeading from "../components/SectionHeading";
+import Text from "../components/Text";
+import TA from "../copy/experiences/TA";
+import Abillion from "../copy/experiences/Abillion";
+import AbillionTwo from "../copy/experiences/AbillionTwo";
+import WonderWorkshop from "../copy/experiences/WonderWorkshop";
 
-const SingleExperience = ({
-  date,
-  roleTitle,
-  title,
-  content,
-  isLast
-}) => (
+const SingleExperience = ({ date, roleTitle, title, content, isLast }) => (
   <>
     <ExperienceContainer>
       <LeftSection>
-        <Text style={{ fontSize: '18px', 'margin-bottom': '10px' }}>{date}</Text>
-        <Text style={{ fontSize: '20px', fontWeight: '800' }}>{roleTitle}</Text>
+        <Text style={{ fontSize: "18px", "margin-bottom": "10px" }}>
+          {date}
+        </Text>
+        <Text style={{ fontSize: "20px", fontWeight: "800" }}>{roleTitle}</Text>
       </LeftSection>
 
       <VerticalDivider />
 
       <RightSection>
-        <Text style={{ fontSize: '23px' }}>{title}</Text>
+        <Text style={{ fontSize: "23px" }}>{title}</Text>
         {content}
       </RightSection>
     </ExperienceContainer>
 
     <MobileContainer isLast={isLast}>
       <TopSection>
-        <Text style={{ fontSize: '18px', 'margin-bottom': '10px' }}>{date}</Text>
-        <Text style={{ fontSize: '20px', fontWeight: '800' }}>{roleTitle}</Text>
+        <Text style={{ fontSize: "18px", "margin-bottom": "10px" }}>
+          {date}
+        </Text>
+        <Text style={{ fontSize: "20px", fontWeight: "800" }}>{roleTitle}</Text>
       </TopSection>
 
       <BottomSection>
-        <Text style={{ fontSize: '23px' }}>{title}</Text>
+        <Text style={{ fontSize: "23px" }}>{title}</Text>
         {content}
       </BottomSection>
-
     </MobileContainer>
   </>
-)
+);
 
 const Experience = ({ refProp }) => (
   <Container ref={refProp}>
-    <SectionHeading style={{ marginBottom: '60px' }}>Experience</SectionHeading>
+    <SectionHeading style={{ marginBottom: "60px" }}>Experience</SectionHeading>
 
     <Body>
+      <SingleExperience
+        date="July 2021 - Present"
+        roleTitle="Software Engineer Intern"
+        title="Wonder Workshop"
+        content={<WonderWorkshop />}
+      />
+
+      <SingleExperience
+        date="May 2021 - July 2021"
+        roleTitle="Software Engineer Intern"
+        title="abillion"
+        content={<AbillionTwo />}
+      />
+
       <SingleExperience
         date="January 2021 - May 2021"
         roleTitle="Undergraduate Teaching Assistant"
@@ -62,11 +75,10 @@ const Experience = ({ refProp }) => (
         isLast={true}
       />
     </Body>
-
   </Container>
-)
+);
 
-export default Experience
+export default Experience;
 
 const Container = styled.section`
   width: 100%;
@@ -78,7 +90,7 @@ const Container = styled.section`
   @media (max-width: 768px) {
     padding-bottom: 50px;
   }
-`
+`;
 
 const Body = styled.div`
   display: flex;
@@ -88,7 +100,7 @@ const Body = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
-`
+`;
 
 const ExperienceContainer = styled.div`
   display: flex;
@@ -97,7 +109,7 @@ const ExperienceContainer = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 const LeftSection = styled.div`
   width: 30%;
@@ -106,12 +118,12 @@ const LeftSection = styled.div`
   margin-right: 50px;
   padding-top: 50px;
   text-align: right;
-`
+`;
 
 const VerticalDivider = styled.div`
   width: 1px;
-  background-color: #B0B0B0;
-`
+  background-color: #b0b0b0;
+`;
 
 const RightSection = styled.div`
   width: 60%;
@@ -119,26 +131,26 @@ const RightSection = styled.div`
   flex-direction: column;
   margin-left: 50px;
   padding-top: 50px;
-`
+`;
 
 const MobileContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: ${({isLast}) => isLast ? '0' : '30px'};
+  padding-bottom: ${({ isLast }) => (isLast ? "0" : "30px")};
 
   @media (min-width: 768px) {
     display: none;
   }
-`
+`;
 
 const TopSection = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 10px;
-`
+`;
 
 const BottomSection = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-`
+`;

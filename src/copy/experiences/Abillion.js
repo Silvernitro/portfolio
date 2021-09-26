@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import Text from '../../components/Text'
+import React from "react";
+import styled from "styled-components";
+import Text from "../../components/Text";
 
-const TA = () => (
+const Abillion = () => (
   <ul>
     <ListItem>
       <ListText>
@@ -11,7 +11,8 @@ const TA = () => (
     </ListItem>
     <ListItem>
       <ListText>
-        Implemented API endpoints and database modifications for features such as:
+        Implemented API endpoints and database modifications for features such
+        as:
         <ul>
           <ListItem>
             <ListText>
@@ -19,41 +20,40 @@ const TA = () => (
             </ListText>
           </ListItem>
           <ListItem>
-            <ListText>
-              Integrating SEO-friendly recipe articles
-            </ListText>
+            <ListText>Integrating SEO-friendly recipe articles</ListText>
           </ListItem>
         </ul>
       </ListText>
     </ListItem>
     <ListItem>
       <ListText>
-        {'Revamped the '}
+        {"Revamped the "}
         <a href="https://www.abillion.com/careers">careers</a>
-        {' webpage'}
+        {" webpage"}
       </ListText>
     </ListItem>
     <ListItem>
       <ListText>
-        Added a feature on the webpage that allows users to add and view saved collection items
+        Added a feature on the webpage that allows users to add and view saved
+        collection items
       </ListText>
     </ListItem>
     <ListItem>
-      <ListText style={{ fontWeight: '600' }}>
+      <ListText style={{ fontWeight: "600" }}>
         {`abillion is a global internet platform for the sustainability movement.
         It's a social and peer review community with over 250k members active across English,
         Spanish & Asian markets.`}
       </ListText>
     </ListItem>
   </ul>
-)
+);
 
-export default TA
+export default Abillion;
 
 const ListItem = styled.li`
   font-size: 18px;
-`
+`;
 
 const ListText = styled(Text)`
   line-height: 26px;
-`
+`;
