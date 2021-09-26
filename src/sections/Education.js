@@ -67,7 +67,6 @@ const Education = ({ refProp }) => (
             text="Transcript"
             href="https://drive.google.com/file/d/1hg-d_1pRSnOJvt0cvk29A1hKP7nE98k3/view?usp=sharing"
             isFirst
-            style={{ alignSelf: "flex-start" }}
           />
         </RightSection>
       </ExperienceContainer>
