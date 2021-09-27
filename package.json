@@ -17,7 +17,7 @@
     "styled-components": "^5.3.0",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https://silvernitro.github.io/portfolio",
+  "homepage": "https://silvernitro.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
