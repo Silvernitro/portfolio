@@ -11,8 +11,8 @@ const AbillionTwo = () => (
         <ul>
           <ListItem>
             <ListText>
-              Tracks component visibility to determine user impressions and
-              buffers impression data locally before sending to the backend.
+              Track component visibility to determine user impressions, buffer
+              and persist impression data locally before sending to the backend.
             </ListText>
           </ListItem>
           <ListItem>
