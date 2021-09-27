@@ -45,7 +45,7 @@ const IntroBox = () => (
           </Email>
 
           <a
-            href="https://drive.google.com/file/d/1YkdjdK6pOXbzlgV7tetaRu-_XSdp34u7/view?usp=sharing"
+            href="https://drive.google.com/file/d/1XhS27QhT5k3wVPM4ju8wxw0Ck6umDQAN/view?usp=sharing"
             target="_blank"
             rel="noreferrer noopener"
             style={{ textDecoration: "none" }}
